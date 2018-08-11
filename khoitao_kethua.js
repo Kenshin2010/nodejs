@@ -46,3 +46,15 @@ console.log(person.getName() + " - " + person.getAge() + " - " + person.getAddre
 console.log(user.getName() + " - " + user.getAge() + " - " + user.getAddress());
 
 
+Date.prototype.vnDate = function () {
+    var yyyy = this.getFullYear();
+    var mm = this.getMonth() + 1;
+    var dd = this.getDate();
+    return dd + "/" + mm + "/" + yyyy;
+}
+
+var now = new Date();
+var xms = new Date(2018,11,11);
+
+console.log(now.vnDate());
+console.log(xms.vnDate());
