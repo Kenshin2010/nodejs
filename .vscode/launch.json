@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/khoitao_kethua.js"
+            "program": "${workspaceFolder}/app_greet.js"
         }
     ]
 }
