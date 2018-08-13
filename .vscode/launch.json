@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/app_greet.js"
+            "program": "${workspaceFolder}/exports_module.exports/app.js"
         }
     ]
 }
