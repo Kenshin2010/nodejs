@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/exports_module.exports/app.js"
+            "program": "${workspaceFolder}/service/web_service/dinh_tuyen_ung_dung/app.js"
         }
     ]
 }
