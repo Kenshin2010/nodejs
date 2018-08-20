@@ -14,7 +14,6 @@ class Person{
         console.log("Hello , " + this.fistName + " - " + this.lastName);
     }
 }
-
 // function Person(fisrtName, lastName) {
 //     this.fisrtName = fisrtName;
 //     this.lastName = lastName;
