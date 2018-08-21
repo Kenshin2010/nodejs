@@ -25,7 +25,6 @@ app.get("/", function (req, res) {
     <link href="/assets/style.css" rel="stylesheet" type="text/css">
     <h1> Hello express !!! </h1>
     <p> Request time :  ${req.requestTime}}</p>
-    
     `);
 })
 
