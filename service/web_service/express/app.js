@@ -53,7 +53,7 @@ app.get("/user/:id", function (req, res) {
 
     //render file ejs test 
     res.render("user", {ID : req.params.id})
-})
+}) 
 
 app.listen(port, function () {
     console.log("server listening on PORT " + port);
