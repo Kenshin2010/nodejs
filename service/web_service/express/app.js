@@ -1,15 +1,18 @@
 var express = require("express");
 var cookieParser = require("cookie-parser");
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
+
+var apiController = require("./controllers/apiController");
+var homeController = require("./controllers/homeController");
 
 var app = express();
 
 
 var port = 3000;
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+// var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-// create application/json parser
-var jsonParser = bodyParser.json()
+// // create application/json parser
+// var jsonParser = bodyParser.json()
 
 app.use("/assets", express.static(__dirname + "/public"));
 app.use(cookieParser());
@@ -25,6 +28,8 @@ app.use("/", function (req, res, next) {
 })
 
 
+apiController(app);
+homeController(app);
 // other 
 
 // app.get("/", function (req, res) {
@@ -37,35 +42,35 @@ app.use("/", function (req, res, next) {
 // })
 
 
-app.get("/", function (req, res) {
-    res.render("index");
-})
+// app.get("/", function (req, res) {
+//     res.render("index");
+// })
 
-app.get("/api/user/:id", function (req, res) {
-    //get data from database
-    // res.render("user", { ID: req.params.id, queryString: req.query.qstr });
-    var result = {
-        fisrtName: "Mai",
-        lastName: "Hoa"
-    }
-    res.json(result);
-})
+// app.get("/api/user/:id", function (req, res) {
+//     //get data from database
+//     // res.render("user", { ID: req.params.id, queryString: req.query.qstr });
+//     var result = {
+//         fisrtName: "Mai",
+//         lastName: "Hoa"
+//     }
+//     res.json(result);
+// })
 
-app.post("/api/user", jsonParser, function (req, res) {
-    //create new and save to the db
+// app.post("/api/user", jsonParser, function (req, res) {
+//     //create new and save to the db
 
-})
+// })
 
-app.put("/api/user", jsonParser, function (req, res) {
-    //update new and save to the db
+// app.put("/api/user", jsonParser, function (req, res) {
+//     //update new and save to the db
 
-})
+// })
 
 
-app.delete("/api/user/:id", function (req, res) {
-    //delete user from db
+// app.delete("/api/user/:id", function (req, res) {
+//     //delete user from db
 
-})
+// })
 
 //===============test
 // app.get("/api/", function (req, res) {
@@ -89,17 +94,17 @@ app.delete("/api/user/:id", function (req, res) {
 // res.render("user", { ID: req.params.id, queryString: req.query.qstr });
 // })
 
-app.post("/login", urlencodedParser, function (req, res) {
-    res.send("Welcome : " + req.body.username);
-    console.log(req.body.username);
-    console.log(req.body.password);
-})
+// app.post("/login", urlencodedParser, function (req, res) {
+//     res.send("Welcome : " + req.body.username);
+//     console.log(req.body.username);
+//     console.log(req.body.password);
+// })
 
-app.post("/loginjson", jsonParser, function (req, res) {
-    res.send("OK");
-    console.log(req.body.firstName);
-    console.log(req.body.lastName);
-})
+// app.post("/loginjson", jsonParser, function (req, res) {
+//     res.send("OK");
+//     console.log(req.body.firstName);
+//     console.log(req.body.lastName);
+// })
 
 app.listen(port, function () {
     console.log("server listening on PORT " + port);
