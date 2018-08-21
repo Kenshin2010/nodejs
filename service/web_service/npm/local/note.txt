@@ -1,0 +1,10 @@
+
+// download khi su dung git
+npm install
+// update khi phien ban moi
+npm update
+
+// npm nodemon dc su dung khi code thay doi se tu dong load lai
+npm install -g nodemon
+// su dung nodemon khi restart lai app
+nodemon app.js

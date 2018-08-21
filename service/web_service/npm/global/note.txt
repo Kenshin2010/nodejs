@@ -1,0 +1,9 @@
+
+--- chi dinh file npm
+npm root -g
+
+---- cai dat npm global
+npm install -g server-here
+
+---chay server
+global> here --port 8080
