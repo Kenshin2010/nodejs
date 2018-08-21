@@ -40,7 +40,7 @@ app.get("/api", function (req, res) {
  * user : id
  */
 app.get("/user/:id", function (req, res) {
-    res.cookie("userName", req.param);
+    res.cookie("userName", req.param.id);
     res.send(`<h1>user : ${req.params.id}`);
 })
 
