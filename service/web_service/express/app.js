@@ -41,24 +41,53 @@ app.get("/", function (req, res) {
     res.render("index");
 })
 
-app.get("/api", function (req, res) {
-    res.json({
+app.get("/api/user/:id", function (req, res) {
+    //get data from database
+    // res.render("user", { ID: req.params.id, queryString: req.query.qstr });
+    var result = {
         fisrtName: "Mai",
         lastName: "Hoa"
-    });
+    }
+    res.json(result);
 })
+
+app.post("/api/user", jsonParser, function (req, res) {
+    //create new and save to the db
+
+})
+
+app.put("/api/user", jsonParser, function (req, res) {
+    //update new and save to the db
+
+})
+
+
+app.delete("/api/user/:id", function (req, res) {
+    //delete user from db
+
+})
+
+//===============test
+// app.get("/api/", function (req, res) {
+//     res.json({
+//         fisrtName: "Mai",
+//         lastName: "Hoa"
+//     });
+// })
 
 /**
  * product : id
  * user : id
  */
-app.get("/user/:id", function (req, res) {
-    // res.cookie("userName", req.param.id);
-    // res.send(`<h1>user : ${req.params.id}`);
 
-    //render file ejs test 
-    res.render("user", { ID: req.params.id, queryString: req.query.qstr });
-})
+//===============test
+// app.get("/user/:id", function (req, res) {
+// res.cookie("userName", req.param.id);
+// res.send(`<h1>user : ${req.params.id}`);
+
+//render file ejs test 
+// res.render("user", { ID: req.params.id, queryString: req.query.qstr });
+// })
 
 app.post("/login", urlencodedParser, function (req, res) {
     res.send("Welcome : " + req.body.username);
@@ -66,7 +95,7 @@ app.post("/login", urlencodedParser, function (req, res) {
     console.log(req.body.password);
 })
 
-app.post("/loginjson", jsonParser, function (req,res) {
+app.post("/loginjson", jsonParser, function (req, res) {
     res.send("OK");
     console.log(req.body.firstName);
     console.log(req.body.lastName);
