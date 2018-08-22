@@ -1,0 +1,16 @@
+Bước 1:  Bạn lick vào config ->Service and Setting
+Đến đây các bạn thấy cổng port 80. Ta sẽ đổi số 80 thành 8080 và 443 thành 600.
+
+(Lưu ý: ở đây tôi chỉ ví dụ cổng port trên các bạn có thể thay đổi tùy ý nhưng các bạn phải kiểm tra Netstat xem có trùng với cổng nào không.)
+Bước 2: Các bạn mở file httpd.conf  trong D:xamppapacheconf 
+
+Ctrl + F tìm kiếm số 80 thay đổi thành 8080. Và file httpd-ssl.conf trong D:xamppapacheconfextra thao tác như lúc nãy Ctrl + F tìm kiếm số 443 thay đổi thành 600.
+
+Đến đây đã xong.
+
+
+C:\xampp\apache\conf
+
+C:\xampp\apache\conf\extra
+
+C:\xampp\apache\conf\original\extra
