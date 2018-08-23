@@ -9,12 +9,12 @@ module.exports = function (app) {
                 isDone : false
             },
             {
-                text: "Hoc Android",
+                text: "Hoc Java",
                 isDone : false
             },
             {
                 text: "Hoc Android",
-                isDone: "true"
+                isDone: true
 
             }
         ];

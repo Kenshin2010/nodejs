@@ -13,8 +13,9 @@ function getTodos(res) {
 
 
 module.exports = function (app) {
-    //get all todo
 
+    
+    //get all todo
     app.get("/api/todos", function (req, res) {
         getTodos(res);
     });
@@ -54,8 +55,8 @@ module.exports = function (app) {
 
     });
 
-    // update todo
 
+    // update todo
     app.put("/api/todo", function (req, res) {
         if (!res.body.id) {
             return res.status(500).send("Id is require");
@@ -65,8 +66,7 @@ module.exports = function (app) {
             }, {
                     text: req.body.text,
                     isDone: req.body.isDone
-                },
-                function (err, todo) {
+                }, function (err, todo) {
                     if (err) {
                         return res.status(500).json(err);
                     } else {
