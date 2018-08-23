@@ -58,7 +58,7 @@ module.exports = function (app) {
 
     // update todo
     app.put("/api/todo", function (req, res) {
-        if (!res.body.id) {
+        if (!req.body.id) {
             return res.status(500).send("Id is require");
         } else {
             Todos.update({
