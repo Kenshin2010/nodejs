@@ -14,3 +14,9 @@ C:\xampp\apache\conf
 C:\xampp\apache\conf\extra
 
 C:\xampp\apache\conf\original\extra
+
+
+
+///=========
+
+http://localhost:8080/phpmyadmin/
